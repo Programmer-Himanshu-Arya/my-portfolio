@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
     <title>Our Projects | AryaDevs Agency</title>
     <meta name="description" content="Explore some of our top projects." />
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="css/team.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/team.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/projects.css" />
     <script src="js/pkgs/barba.umd.js"></script>
     <script src="js/pkgs/lodash.min.js"></script>
     <script src="js/pkgs/revealer.iife.js"></script>
@@ -21,52 +24,135 @@
     <script src="js/pkgs/TweenMax.min.js"></script>
     <script src="js/pkgs/anime.min.js"></script>
     <script src="js/pkgs/tailwindcss.min.js"></script>
-</head>
+  </head>
 
-<body data-barba="wrapper">
+  <body data-barba="wrapper">
     <div class="navbar">
-        <a href="/index.html" class="logo__btn">AryaDevs</a>
-        <nav class="menu__itms">
-            <a href="index.html">home</a>
-            <a href="about.html">about</a>
-            <a href="services.html">services</a>
-            <a href="projects.html">projects</a>
-            <a href="contact.html">contact</a>
-        </nav>
-        <button class="menu__btn" type="button">menu</button>
+      <a href="/index.html" class="logo__btn">AryaDevs</a>
+      <nav class="menu__itms">
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="services.html">services</a>
+        <a href="projects.html">projects</a>
+        <a href="contact.html">contact</a>
+      </nav>
+      <button class="menu__btn" type="button">menu</button>
     </div>
 
     <div id="loader-container"></div>
     <div id="menu-container"></div>
     <script>
-        function loadComponent(htmlFile, containerId, scriptFile) {
-            fetch(htmlFile)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(containerId).innerHTML = data;
-                    const script = document.createElement("script");
-                    script.src = scriptFile;
-                    document.body.appendChild(script);
-                })
-                .catch(error => console.error(`Error loading ${htmlFile}:`, error));
-        }
-        loadComponent("loader.html", "loader-container", "js/loader.js");
-        loadComponent("menu.html", "menu-container", "js/menu.js");
+      function loadComponent(htmlFile, containerId, scriptFile) {
+        fetch(htmlFile)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(containerId).innerHTML = data;
+            const script = document.createElement("script");
+            script.src = scriptFile;
+            document.body.appendChild(script);
+          })
+          .catch((error) => console.error(`Error loading ${htmlFile}:`, error));
+      }
+      loadComponent("loader.html", "loader-container", "js/loader.js");
+      loadComponent("menu.html", "menu-container", "js/menu.js");
     </script>
 
     <main data-barba="container" data-barba-namespace="services">
-        <div class="qualities">
-            <div class="head">
-                <h2>Projects</h2>
-                <p>
-                    Explore our some one the top projects.
-                </p>
-                
+      <div class="qualities">
+        <div class="head">
+          <h2>Projects</h2>
+          <p>Explore our some one the top projects.</p>
+          <div>
+            <div class="projects-container">
+              <div class="projects-card">
+                <div class="projects-content">
+                  <div class="projects-avatar">
+                    <image
+                      src="https://i.ibb.co/NSDhTMG/image.png"
+                      alt=""
+                      width="50"
+                      height="50"
+                      class="projects-avatar-image"
+                    />
+                  </div>
+                  <div class="projects-info">
+                    Roofing Website
+                    <h4 class="projects-description">
+                      An app designed for a Roofing Company, showcasing my
+                      skills in web development, but not intended for commercial
+                      use.
+                    </h4>
+                    <div class="projects-live-site">
+                      <a
+                        href="https://roofing-black.vercel.app/"
+                        target="_blank"
+                      >
+                        live site
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="projects-card">
+                <div class="projects-content">
+                  <div class="projects-avatar">
+                    <image
+                      src="https://i.ibb.co/Jczdz46/Favicon.png"
+                      alt=""
+                      width="50"
+                      height="50"
+                      class="projects-avatar-image"
+                    />
+                  </div>
+                  <div class="projects-info">
+                    Arya's Bakery
+                    <h4 class="projects-description">
+                        An app designed for a bakery, showcasing my skills in web development, but not intended for commercial use. 🎂🍰
+                    </h4>
+                    <div class="projects-live-site">
+                      <a
+                        href="https://arya-bakery.vercel.app/"
+                        target="_blank"
+                      >
+                        live site
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="projects-card">
+                <div class="projects-content">
+                  <div class="projects-avatar">
+                    <image
+                      src="https://i.ibb.co/5GtNNrc/image.png"
+                      alt=""
+                      width="50"
+                      height="50"
+                      class="projects-avatar-image"
+                    />
+                  </div>
+                  <div class="projects-info">
+                    Startup Directory
+                    <h4 class="projects-description">
+                        Submit Ideas of new Startups, Vote on Pitches, and Get Noticed in Virtual Competitions ✨✨
+                    </h4>
+                    <div class="projects-live-site">
+                      <a
+                        href="https://startup-directory-official.vercel.app/"
+                        target="_blank"
+                      >
+                        live site
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </main>
 
     <script src="js/page.js"></script>
-</body>
-
+  </body>
 </html>

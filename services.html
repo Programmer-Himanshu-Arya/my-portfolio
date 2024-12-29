@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Our Services | AryaDevs Agency</title>
+    <meta name="description" content="We make modern and intuitive solutions for your business." />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/pkgs/barba.umd.js"></script>
+    <script src="js/pkgs/lodash.min.js"></script>
+    <script src="js/pkgs/revealer.iife.js"></script>
+    <script src="js/pkgs/gsap.min.js"></script>
+    <script src="js/pkgs/TweenMax.min.js"></script>
+    <script src="js/pkgs/anime.min.js"></script>
+    <script src="js/pkgs/tailwindcss.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+    <div class="navbar">
+        <a href="/index.html" class="logo__btn">AryaDevs</a>
+        <nav class="menu__itms">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="services.html">services</a>
+            <a href="projects.html">projects</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <button class="menu__btn" type="button">menu</button>
+    </div>
+
+    <div id="loader-container"></div>
+    <div id="menu-container"></div>
+    <script>
+        function loadComponent(htmlFile, containerId, scriptFile) {
+            fetch(htmlFile)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(containerId).innerHTML = data;
+                    const script = document.createElement("script");
+                    script.src = scriptFile;
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error(`Error loading ${htmlFile}:`, error));
+        }
+        loadComponent("loader.html", "loader-container", "js/loader.js");
+        loadComponent("menu.html", "menu-container", "js/menu.js");
+    </script>
+
+    <main data-barba="container" data-barba-namespace="services">
+        <div class="hero">
+            <p>We make <span>modern</span> & <span>intuitive</span> Web solutions for your business</p>
+        </div>
+        <div class="services">
+            <div class="top">
+                <p>
+                    At AryaDevs, we specialize in crafting custom web solutions that drive results. With a team of skilled developers, designers, and digital strategists, we build seamless, user-friendly websites and applications that help businesses thrive in the digital world. Whether you need a dynamic website, or a complex web application, we have the expertise to bring your vision to life.
+                </p>
+            </div>
+        </div>
+
+        <div class="format-container">
+            <div class="services_box">
+                <div class="services_item">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <div class="services-item_title">
+                            Web Development
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "Barracuda";
+    src: url(/assets/font/Barracuda-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Neue Montreal";
+    src: url(/assets/font/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url(/assets/font/PPEditorialOld-Regular.otf);
+}
+
+@font-face {
+    font-family: "Bridge Head Con Medium";
+    src: url(/assets/font/BridgeHeadCon-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Bigilla";
+    src: url(/assets/font/Bigilla.otf);
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url(/assets/font/Coolvetica-Regular.otf);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/font/Poppins.ttf);
+}
+
+@font-face {
+    font-family: "Recoleta";
+    src: url(/assets/font/Recoleta.otf);
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url(/assets/font/Sora.ttf);
+}
+
+@font-face {
+    font-family: "Gallery Modern";
+    src: url(/assets/font/GalleryModern.woff2);
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(/assets/font/Lato.ttf);
+}
+
+@font-face {
+    font-family: "Utendo";
+    src: url(/assets/font/Utendo-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    cursor: url("/assets/cursor/default-dark.png"), default;
+    overscroll-behavior-y: none;
+}
+
+main {
+    position: relative;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+a {
+    cursor: url("/assets/cursor/pointer-dark.png"), default;
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    color: inherit;
+    border: inherit;
+    background: none;
+    cursor: url("/assets/cursor/pointer-dark.png"), default;
+    font-family: inherit;
+}
+
+input {
+    cursor: url("/assets/cursor/edit-dark.png"), default;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: url("/assets/cursor/default-dark.png"), default;
+    pointer-events: none;
+}
+
+.navbar .logo__btn {
+    padding: 2rem;
+    font-size: 30px;
+    font-family: "Utendo", sans-serif;
+    /* font-family: "Gallery Modern"; */
+    font-weight: 600;
+    text-transform: lowercase;
+    line-height: 1;
+    cursor: url("/assets/cursor/pointer-dark.png"), default;
+    pointer-events: fill;
+}
+
+.navbar .menu__itms {
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    font-family: "Utendo", sans-serif;
+
+    a {
+        line-height: 1;
+        pointer-events: fill;
+    }
+}
+
+.navbar .menu__btn {
+    padding: 2rem;
+    display: none;
+    font-size: 30px;
+    font-family: "Recoleta", sans-serif;
+    line-height: 1;
+    pointer-events: fill;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar .logo__btn {
+        padding: 1rem;
+    }
+
+    .navbar .menu__itms {
+        display: none;
+    }
+
+    .navbar .menu__btn {
+        padding: 1rem;
+        display: block;
+    }
+}

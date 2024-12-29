@@ -1,0 +1,94 @@
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+main[data-barba-namespace="contact"] {
+    overflow: hidden;
+
+    section {
+        background-color: #f5f4f6;
+        font-family: "Neue Montreal", sans-serif;
+        cursor: url("/assets/cursor/default-light.png"), default;
+    }
+
+    #content a,
+    #content button {
+        cursor: url("/assets/cursor/pointer-light.png"), default;
+    }
+
+    #next1 button,
+    #back1 button,
+    #next2 button,
+    #back2 button,
+    #next3 button,
+    #back3 button,
+    #next4,
+    .service-btn,
+    .budget-btn {
+        cursor: url("/assets/cursor/pointer-dark.png"), default;
+    }
+
+    #section1 {
+        position: relative;
+        margin: 0 auto;
+        margin-top: calc(4rem + 30px);
+        margin-bottom: 2rem;
+        padding: 2rem;
+        width: calc(100vw - 4rem);
+        height: calc(100svh - (6rem + 30px));
+        border-radius: 20px;
+        background-color: #111111;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+
+    #section2,
+    #section3,
+    #section4,
+    #section5,
+    #section6 {
+        position: absolute;
+        bottom: -100%;
+    }
+
+    .hero-marquee {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        font-family: "Sora";
+        font-size: 5rem;
+        color: #FFF;
+        text-align: center;
+    }
+
+    .animate-spin {
+        animation: spin 0.6s linear infinite;
+    }
+
+    @media screen and (max-width: 900px) {
+        #section1 {
+            margin-top: calc(2rem + 30px);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            width: calc(100vw - 2rem);
+            min-height: calc(100svh - (3rem + 30px));
+
+            .hero-marquee {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        #section1 {
+            .hero-marquee {
+                font-size: 32px;
+            }
+        }
+    }
+}
